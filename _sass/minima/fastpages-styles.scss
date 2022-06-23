@@ -24,13 +24,14 @@ img.emoji{
 .page-content {
         -webkit-font-smoothing: antialiased !important;
         text-rendering: optimizeLegibility !important;
-        font-family: "Segoe UI", SegoeUI, Roboto, "Segoe WP", "Helvetica Neue", "Helvetica", "Tahoma", "Arial", sans-serif !important;
+        font-family: 'Playfair Display', serif;
+        //font-family: "Segoe UI", SegoeUI, Roboto, "Segoe WP", "Helvetica Neue", "Helvetica", "Tahoma", "Arial", sans-serif !important;
 }
 
 // make non-headings slightly lighter
-//.post-content p, .post-content li {
-//   font-size: 20px;
- //  color: #515151;
+.post-content p, .post-content li {
+   font-size: 16px;
+   color: #515151;
 }
 
 .post-link{
@@ -173,7 +174,8 @@ h6:hover .anchor-link {
 .search-results-list-item {padding-bottom: 1rem;}
 .search-results-list-item .search-result-title {
   font-size: 16px;
-  color: #d9230f;
+  color: #fafafa;
+        //#d9230f
 }
 .search-result-rel-url {color: silver;}
 .search-results-list-item a {display: block; color: #777;}
@@ -192,7 +194,8 @@ h6:hover .anchor-link {
   margin-bottom:.02rem !important;
 }
 .search-result-highlight {
-  color: #2e0137;
+  color: #423f42;
+        //#2e0137
   font-weight:bold;
 }
 
@@ -254,7 +257,7 @@ table {
 }
 
 pre code {
-  font-size: 15px !important;
+  font-size: 17px !important;
 }
 
 // Handle youtube videos, so they dont break on mobile devices
