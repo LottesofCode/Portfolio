@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap");
 .highlight .c { color: #998; font-style: italic; }
 
 .highlight .err { color: #a61717; background-color: #e3d2d2; }
@@ -464,6 +465,8 @@ canvas { filter: invert(100%); }
 .post-list > li > div { box-shadow: none !important; background-color: #1b2025; border: none !important; }
 
 li .post-meta-description { color: rgba(255, 255, 255, 0.69) !important; }
+
+.text_cell, .post-title, .site-nav, .site-title, h3, .page-description { font-family: 'Dosis', sans-serif !important; }
 
 .language-python + .language-plaintext { border-left: 1px solid grey; margin-left: 1rem !important; }
 
