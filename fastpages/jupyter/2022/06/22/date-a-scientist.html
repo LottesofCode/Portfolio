@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      51 min read
+      52 min read
     
 </span></p>
 
@@ -131,8 +131,12 @@ window.onload = wrap_img;
 </li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#Importing-libraries">Importing libraries </a></li>
-<li class="toc-entry toc-h2"><a href="#Loading-the-data">Loading the data </a></li>
+<li class="toc-entry toc-h2"><a href="#Initial">Initial </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Importing-libraries">Importing libraries </a></li>
+<li class="toc-entry toc-h3"><a href="#Loading-the-dataframe">Loading the dataframe </a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h2"><a href="#Exploring-the-data">Exploring the data </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#Zodiac-sign-data">Zodiac sign data </a></li>
@@ -214,9 +218,12 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Importing-libraries">
-<a class="anchor" href="#Importing-libraries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Importing libraries<a class="anchor-link" href="#Importing-libraries"> </a>
+<h2 id="Initial">
+<a class="anchor" href="#Initial" aria-hidden="true"><span class="octicon octicon-link"></span></a>Initial<a class="anchor-link" href="#Initial"> </a>
 </h2>
+<h3 id="Importing-libraries">
+<a class="anchor" href="#Importing-libraries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Importing libraries<a class="anchor-link" href="#Importing-libraries"> </a>
+</h3>
 </div>
 </div>
 </div>
@@ -245,9 +252,9 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Loading-the-data">
-<a class="anchor" href="#Loading-the-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Loading the data<a class="anchor-link" href="#Loading-the-data"> </a>
-</h2>
+<h3 id="Loading-the-dataframe">
+<a class="anchor" href="#Loading-the-dataframe" aria-hidden="true"><span class="octicon octicon-link"></span></a>Loading the dataframe<a class="anchor-link" href="#Loading-the-dataframe"> </a>
+</h3>
 </div>
 </div>
 </div>
@@ -259,7 +266,7 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">okc</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">'profiles.csv'</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">okc</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="p">(</span><span class="n">okc</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -272,7 +279,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 
-<div class="output_html rendered_html output_subarea ">
+<div class="output_html rendered_html output_subarea output_execute_result">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -457,8 +464,8 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#print(okc.dtypes)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">okc</span><span class="o">.</span><span class="n">info</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">okc</span><span class="o">.</span><span class="n">age</span><span class="p">))</span>
+<span class="p">(</span><span class="n">okc</span><span class="o">.</span><span class="n">info</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Number of rows = </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">okc</span><span class="o">.</span><span class="n">age</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -509,24 +516,7 @@ Data columns (total 31 columns):
  30  status       59946 non-null  object 
 dtypes: float64(1), int64(2), object(28)
 memory usage: 14.2+ MB
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea ">
-<pre>None</pre>
-</div>
-
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>59946
+Number of rows = 59946
 </pre>
 </div>
 </div>
@@ -540,37 +530,77 @@ memory usage: 14.2+ MB
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The data provided has the following columns, which provide multiple choice answer:</p>
-<p><strong>body_type</strong> - categorical variable/
-<strong>diet</strong> - categorical variable/
-<strong>drinks</strong> - categorical variable/
-<strong>drugs</strong> - categorical variable/
-<strong>education</strong> - categorical variable/
-<strong>ethnicity</strong> - categorical variable
-<strong>height</strong> - continuous variable
-<strong>income</strong> - continuous variable
-<strong>job</strong> - categorical variable
-<strong>last_online</strong> - date variable
-<strong>offspring</strong> - categorical variable
-<strong>orientation</strong> - categorical variable
-<strong>pets</strong> - categorical variable
-<strong>religion</strong> - categorical variable
-<strong>sex</strong> - categorical variable
-<strong>sign</strong> - categorical variable
-<strong>smokes</strong> - categorical variable
-<strong>speaks</strong> - categorical variable
-<strong>status</strong> - categorical variable</p>
+<p>The data provided has the following columns, which provide multiple choice answers:</p>
+<ul>
+<li>
+<strong>body_type</strong> - categorical variable</li>
+<li>
+<strong>diet</strong> - categorical variable</li>
+<li>
+<strong>drinks</strong> - categorical variable</li>
+<li>
+<strong>drugs</strong> - categorical variable</li>
+<li>
+<strong>education</strong> - categorical variable</li>
+<li>
+<strong>ethnicity</strong> - categorical variable</li>
+<li>
+<strong>height</strong> - continuous variable</li>
+<li>
+<strong>income</strong> - continuous variable</li>
+<li>
+<strong>job</strong> - categorical variable</li>
+<li>
+<strong>last_online</strong> - date variable</li>
+<li>
+<strong>offspring</strong> - categorical variable</li>
+<li>
+<strong>orientation</strong> - categorical variable</li>
+<li>
+<strong>pets</strong> - categorical variable</li>
+<li>
+<strong>religion</strong> - categorical variable</li>
+<li>
+<strong>sex</strong> - categorical variable</li>
+<li>
+<strong>sign</strong> - categorical variable</li>
+<li>
+<strong>smokes</strong> - categorical variable</li>
+<li>
+<strong>speaks</strong> - categorical variable</li>
+<li>
+<strong>status</strong> - categorical variable</li>
+</ul>
 <p>And a set of open short-answer responses to :</p>
-<p><strong>essay0</strong> - My self-summary
+<ul>
+<li>
+<strong>essay0</strong> - My self-summary</li>
+<li>
 <strong>essay1</strong> - What I’m doing with my life
-<strong>essay2</strong> - I’m really good at…
-<strong>essay3</strong> - The first thing people usually notice about me…
-<strong>essay4</strong> - Favorite books, movies, show, music, and food
-<strong>essay5</strong> - The six things I could never do without
-<strong>essay6</strong> - I spend a lot of time thinking about…
-<strong>essay7</strong> - On a typical Friday night I am…
-<strong>essay8</strong> - The most private thing I am willing to admit
-<strong>essay9</strong> - You should message me if…</p>
+<strong>*essay2</strong> - I’m really good at…</li>
+<li>
+<strong>essay3</strong> - The first thing people usually notice about me…</li>
+<li>
+<strong>essay4</strong> - Favorite books, movies, show, music, and food</li>
+<li>
+<strong>essay5</strong> - The six things I could never do without</li>
+<li>
+<strong>essay6</strong> - I spend a lot of time thinking about…</li>
+<li>
+<strong>essay7</strong> - On a typical Friday night I am…</li>
+<li>
+<strong>essay8</strong> - The most private thing I am willing to admit</li>
+<li>
+<strong>essay9</strong> - You should message me if…</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Changing the essay question columns into easier to understand variable names</p>
 
 </div>
 </div>
@@ -583,7 +613,7 @@ memory usage: 14.2+ MB
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">okc</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'essay0'</span> <span class="p">:</span> <span class="s1">'self_summary'</span><span class="p">,</span> <span class="s1">'essay1'</span> <span class="p">:</span> <span class="s1">'life_plans'</span><span class="p">,</span> <span class="s1">'essay2'</span><span class="p">:</span> <span class="s1">'good_at'</span><span class="p">,</span> <span class="s1">'essay3'</span> <span class="p">:</span> <span class="s1">'notice_about'</span><span class="p">,</span> <span class="s1">'essay4'</span> <span class="p">:</span> <span class="s1">'favourites'</span><span class="p">,</span> <span class="s1">'essay5'</span> <span class="p">:</span> <span class="s1">'do_without'</span><span class="p">,</span> <span class="s1">'essay6'</span> <span class="p">:</span> <span class="s1">'think_about'</span><span class="p">,</span> <span class="s1">'essay7'</span> <span class="p">:</span> <span class="s1">'friday'</span><span class="p">,</span> <span class="s1">'essay8'</span> <span class="p">:</span> <span class="s1">'private'</span><span class="p">,</span> <span class="s1">'essay9'</span> <span class="p">:</span> <span class="s1">'message'</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">okc</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<span class="p">(</span><span class="n">okc</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -595,16 +625,18 @@ memory usage: 14.2+ MB
 
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
+
+
+<div class="output_text output_subarea output_execute_result">
 <pre>Index(['age', 'body_type', 'diet', 'drinks', 'drugs', 'education',
        'self_summary', 'life_plans', 'good_at', 'notice_about', 'favourites',
        'do_without', 'think_about', 'friday', 'private', 'message',
        'ethnicity', 'height', 'income', 'job', 'last_online', 'location',
        'offspring', 'orientation', 'pets', 'religion', 'sex', 'sign', 'smokes',
        'speaks', 'status'],
-      dtype='object')
-</pre>
+      dtype='object')</pre>
 </div>
+
 </div>
 
 </div>
@@ -620,7 +652,7 @@ memory usage: 14.2+ MB
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">okc</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="n">okc</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
 </pre></div>
 
     </div>
@@ -633,7 +665,7 @@ memory usage: 14.2+ MB
 <div class="output_area">
 
 
-<div class="output_html rendered_html output_subarea ">
+<div class="output_html rendered_html output_subarea output_execute_result">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -728,6 +760,8 @@ memory usage: 14.2+ MB
 <h3 id="Zodiac-sign-data">
 <a class="anchor" href="#Zodiac-sign-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Zodiac sign data<a class="anchor-link" href="#Zodiac-sign-data"> </a>
 </h3>
+<p>First we will take a look at the zodiac sign data within the dataframe.</p>
+
 </div>
 </div>
 </div>
@@ -738,15 +772,7 @@ memory usage: 14.2+ MB
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'The data appears to have </span><span class="si">{</span><span class="n">okc</span><span class="o">.</span><span class="n">sign</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span><span class="si">}</span><span class="s1"> answers to the </span><span class="se">\'</span><span class="s1">What is your zodiac sign?</span><span class="se">\'</span><span class="s1"> question.'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'As we know there are only 12 possible signs, this data must be looked at more closely.'</span><span class="p">)</span>
-<span class="c1">#display(okc.sign.unique())</span>
-<span class="c1">#The data contains information about how important a zodiac sign is to the user in a potential match.  Whilst this is interesting information, 48 different answers will make the analysis time-consuming, so the sign will be extracted into a new column.</span>
-<span class="n">okc</span><span class="p">[</span><span class="s1">'sign_clean'</span><span class="p">]</span><span class="o">=</span> <span class="n">okc</span><span class="o">.</span><span class="n">sign</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">' '</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'The signs are quantified with the importance of zodiac signs for an OkCupid user. Whilst this is interesting information, intially it is best to remove this data and place the cleaned zodiac sign in a new column. Creating a new column means the importance data is retained for future use, if required.'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'There are now </span><span class="si">{</span><span class="n">okc</span><span class="o">.</span><span class="n">sign_clean</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span><span class="si">}</span><span class="s1"> unique zodiac signs in the new okc.sign_clean column, which are </span><span class="si">{</span><span class="n">okc</span><span class="o">.</span><span class="n">sign_clean</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span><span class="si">}</span><span class="s1">.'</span><span class="p">)</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">okc</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'sign_clean'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">okc</span><span class="o">.</span><span class="n">sign</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -758,15 +784,164 @@ memory usage: 14.2+ MB
 
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>The data appears to have 48 answers to the 'What is your zodiac sign?' question.
-As we know there are only 12 possible signs, this data must be looked at more closely.
-The signs are quantified with the importance of zodiac signs for an OkCupid user. Whilst this is interesting information, intially it is best to remove this data and place the cleaned zodiac sign in a new column. Creating a new column means the importance data is retained for future use, if required.
-There are now 12 unique zodiac signs in the new okc.sign_clean column, which are ['gemini' 'cancer' 'pisces' 'aquarius' 'taurus' 'virgo' 'sagittarius'
- 'leo' nan 'aries' 'libra' 'scorpio' 'capricorn'].
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>48</pre>
+</div>
+
+</div>
+
 </div>
 </div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>There appears to be 48 answers to the 'What is your zodiac sign?' question.
+As we know there are only 12 possible signs, this data must be looked at more closely.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">okc</span><span class="o">.</span><span class="n">sign</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array(['gemini', 'cancer', 'pisces but it doesn&amp;rsquo;t matter', 'pisces',
+       'aquarius', 'taurus', 'virgo', 'sagittarius',
+       'gemini but it doesn&amp;rsquo;t matter',
+       'cancer but it doesn&amp;rsquo;t matter',
+       'leo but it doesn&amp;rsquo;t matter', nan,
+       'aquarius but it doesn&amp;rsquo;t matter',
+       'aries and it&amp;rsquo;s fun to think about',
+       'libra but it doesn&amp;rsquo;t matter',
+       'pisces and it&amp;rsquo;s fun to think about', 'libra',
+       'taurus but it doesn&amp;rsquo;t matter',
+       'sagittarius but it doesn&amp;rsquo;t matter',
+       'scorpio and it matters a lot',
+       'gemini and it&amp;rsquo;s fun to think about',
+       'leo and it&amp;rsquo;s fun to think about',
+       'cancer and it&amp;rsquo;s fun to think about',
+       'libra and it&amp;rsquo;s fun to think about',
+       'aquarius and it&amp;rsquo;s fun to think about',
+       'virgo but it doesn&amp;rsquo;t matter',
+       'scorpio and it&amp;rsquo;s fun to think about',
+       'capricorn but it doesn&amp;rsquo;t matter', 'scorpio',
+       'capricorn and it&amp;rsquo;s fun to think about', 'leo',
+       'aries but it doesn&amp;rsquo;t matter', 'aries',
+       'scorpio but it doesn&amp;rsquo;t matter',
+       'sagittarius and it&amp;rsquo;s fun to think about',
+       'libra and it matters a lot',
+       'taurus and it&amp;rsquo;s fun to think about',
+       'leo and it matters a lot',
+       'virgo and it&amp;rsquo;s fun to think about',
+       'cancer and it matters a lot', 'capricorn',
+       'pisces and it matters a lot', 'aries and it matters a lot',
+       'capricorn and it matters a lot', 'aquarius and it matters a lot',
+       'sagittarius and it matters a lot', 'gemini and it matters a lot',
+       'taurus and it matters a lot', 'virgo and it matters a lot'],
+      dtype=object)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The data contains information about how important a zodiac sign is to the user in a potential match.  Whilst this is interesting information, 48 different answers will make the analysis time-consuming, so the sign will be extracted into a new column.
+'The signs are quantified with the importance of zodiac signs for an OkCupid user. Whilst this is interesting information, intially it is best to remove this data and place the cleaned zodiac sign in a new column. Creating a new column means the importance data is retained for future use, if required.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">okc</span><span class="p">[</span><span class="s1">'sign_clean'</span><span class="p">]</span><span class="o">=</span> <span class="n">okc</span><span class="o">.</span><span class="n">sign</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">' '</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">okc</span><span class="o">.</span><span class="n">sign_clean</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>12</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The 12 unique zodiac signs are now correctly labelled in the okc.sign_clean column.
+The below plot shows the amount of each zodiac sign.  The data appears fairly balanced, with capricorn representing slightly less of the users.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">okc</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'sign_clean'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
 
 <div class="output_area">
 
@@ -924,7 +1099,10 @@ There are now 12 unique zodiac signs in the new okc.sign_clean column, which are
     </div>
 </div>
 </div>
-
+<details class="description">
+      <summary class="btn btn-sm" data-open="Hide Output" data-close="Show Output"></summary>
+        <p>
+</p>
 <div class="output_wrapper">
 <div class="output">
 
@@ -999,6 +1177,7 @@ Name: height, dtype: int64
 </div>
 </div>
 
+    </details>
 </div>
     
 
@@ -2889,19 +3068,19 @@ print(max(accuracy_values))
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>0.08833271991166727
-[0.01662524 0.02674059 0.02873407 0.01530131 0.02435824 0.00775153
- 0.00429093 0.00432342 0.00243406 0.01067899 0.01965457 0.00419403
- 0.03408881 0.00061503 0.00123119 0.01339427 0.03175781 0.00508292
- 0.01910062 0.02144567 0.01301612 0.00805546 0.01865006 0.00676307
- 0.0186538  0.01454657 0.01641121 0.01118437 0.01100466 0.01723774
- 0.00266377 0.02388338 0.00763575 0.00607212 0.00329329 0.02045249
- 0.01835171 0.01829021 0.00524179 0.00397426 0.00141362 0.00085523
- 0.00266248 0.0011373  0.00316056 0.01095315 0.01950839 0.00587988
- 0.01066128 0.0178509  0.00860865 0.02657657 0.01609874 0.02027869
- 0.03435797 0.03069408 0.02459501 0.01726674 0.01294642 0.01967557
- 0.01889758 0.00396134 0.00148581 0.01432148 0.01668874 0.02595609
- 0.01094022 0.01351357 0.01786188 0.05400697]
+<pre>0.08735124524598209
+[0.01607039 0.02008834 0.02910372 0.01205035 0.0175794  0.0082154
+ 0.00407284 0.00417951 0.00241875 0.0093714  0.02021308 0.00398401
+ 0.03095164 0.00081928 0.00103057 0.01197665 0.03154579 0.00583407
+ 0.02042834 0.01912311 0.01077212 0.00772868 0.01669942 0.00754726
+ 0.01656753 0.01545034 0.01539376 0.01282007 0.01095852 0.01835813
+ 0.00284585 0.02562546 0.00734807 0.00550831 0.0030539  0.01823558
+ 0.01796864 0.01930549 0.00514901 0.00359135 0.00149713 0.00077843
+ 0.00278787 0.00134235 0.00328306 0.01091292 0.01983345 0.00520942
+ 0.00986275 0.01788264 0.00774301 0.02563794 0.01578018 0.02001609
+ 0.03530387 0.0330011  0.02504869 0.02137397 0.01402765 0.0201083
+ 0.01860244 0.00479428 0.00144901 0.01543568 0.02236582 0.02741532
+ 0.01168888 0.01632144 0.02029262 0.06021955]
 </pre>
 </div>
 </div>
