@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      52 min read
+      51 min read
     
 </span></p>
 
@@ -645,6 +645,14 @@ Number of rows = 59946
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>An initial brief look at the numerical data within the dataframe</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -876,8 +884,8 @@ As we know there are only 12 possible signs, this data must be looked at more cl
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The data contains information about how important a zodiac sign is to the user in a potential match.  Whilst this is interesting information, 48 different answers will make the analysis time-consuming, so the sign will be extracted into a new column.
-'The signs are quantified with the importance of zodiac signs for an OkCupid user. Whilst this is interesting information, intially it is best to remove this data and place the cleaned zodiac sign in a new column. Creating a new column means the importance data is retained for future use, if required.</p>
+<p>The data contains information about how important a zodiac sign is to the user for a potential match.  Whilst this is interesting information, 48 different answers will make the analysis time-consuming, so the sign will be extracted into a new column.
+'The signs are quantified with the importance of zodiac signs to an OkCupid user. Whilst this is interesting information, intially it is best to remove this data and place the cleaned zodiac sign in a new column. Creating a new column means the sign importance data is retained for future use, if required.</p>
 
 </div>
 </div>
@@ -988,8 +996,6 @@ The below plot shows the amount of each zodiac sign.  The data appears fairly ba
 <span class="n">ax2</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">okc</span><span class="o">.</span><span class="n">age</span><span class="p">[</span><span class="n">okc</span><span class="o">.</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">50</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">'green'</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax2</span><span class="p">)</span>
 <span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Age distribution of profiles above 50 years old'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'The mean age is </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">okc</span><span class="o">.</span><span class="n">age</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s1"> years old, with 90% of the data lying below </span><span class="si">{</span><span class="n">okc</span><span class="o">.</span><span class="n">age</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.9</span><span class="p">)</span><span class="si">}</span><span class="s1">.  The maximum age is </span><span class="si">{</span><span class="n">okc</span><span class="o">.</span><span class="n">age</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="si">}</span><span class="s1">, which is either impressive, someone didn</span><span class="se">\'</span><span class="s1">t want to disclose their age, or is an error.  This outlier causes the already left-skewed data to be further skewed'</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1009,14 +1015,6 @@ The below plot shows the amount of each zodiac sign.  The data appears fairly ba
 
 </div>
 
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>The mean age is 32.34 years old, with 90% of the data lying below 46.0.  The maximum age is 110, which is either impressive, someone didn't want to disclose their age, or is an error.  This outlier causes the already left-skewed data to be further skewed
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -1030,12 +1028,10 @@ The below plot shows the amount of each zodiac sign.  The data appears fairly ba
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'Therefore, the two outliers, at 109 and 110 are best removed in order to minimise their effect on the total distribution of the data and thus the statistical analysis.'</span><span class="p">)</span>
-<span class="n">okc</span> <span class="o">=</span> <span class="n">okc</span><span class="p">[</span><span class="n">okc</span><span class="o">.</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">75</span><span class="p">]</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">okc</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">"age"</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">"sex"</span><span class="p">,</span> <span class="n">multiple</span> <span class="o">=</span> <span class="s2">"stack"</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="p">[</span><span class="s1">'cyan'</span><span class="p">,</span> <span class="s1">'yellow'</span><span class="p">],</span> <span class="n">kind</span><span class="o">=</span><span class="s1">'hist'</span><span class="p">,</span> <span class="n">binwidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Cleaned age distribution of OkCupid profiles'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'The plot shows that the age distribution for males and females is very similar - but also indicates that more males use dating applications'</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Mean age: </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">okc</span><span class="o">.</span><span class="n">age</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s1"> '</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'90th percentile: </span><span class="si">{</span><span class="n">okc</span><span class="o">.</span><span class="n">age</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.9</span><span class="p">)</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Maximum age: </span><span class="si">{</span><span class="n">okc</span><span class="o">.</span><span class="n">age</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="si">}</span><span class="s1"> '</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Minimum age: </span><span class="si">{</span><span class="n">okc</span><span class="o">.</span><span class="n">age</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="si">}</span><span class="s1"> '</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1048,10 +1044,47 @@ The below plot shows the amount of each zodiac sign.  The data appears fairly ba
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Therefore, the two outliers, at 109 and 110 are best removed in order to minimise their effect on the total distribution of the data and thus the statistical analysis.
+<pre>Mean age: 32.34 
+90th percentile: 46.0
+Maximum age: 110 
+Minimum age: 18 
 </pre>
 </div>
 </div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The mean age of users is 32 years old, with 90% of the data lying below 46 years. The maximum age is 110 years old, which is either impressive, someone didn't want to disclose their age, or is an error.  This outlier causes the already left-skewed data to be further skewed.  Therefore, the two outliers, at 109 and 110 are best removed in order to minimise their effect on the total distribution of the data, and this the statistical analysis.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">okc</span> <span class="o">=</span> <span class="n">okc</span><span class="p">[</span><span class="n">okc</span><span class="o">.</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">75</span><span class="p">]</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">okc</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">"age"</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">"sex"</span><span class="p">,</span> <span class="n">multiple</span> <span class="o">=</span> <span class="s2">"stack"</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="p">[</span><span class="s1">'cyan'</span><span class="p">,</span> <span class="s1">'yellow'</span><span class="p">],</span> <span class="n">kind</span><span class="o">=</span><span class="s1">'hist'</span><span class="p">,</span> <span class="n">binwidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Cleaned age distribution of OkCupid profiles'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
 
 <div class="output_area">
 
@@ -1063,20 +1096,20 @@ The below plot shows the amount of each zodiac sign.  The data appears fairly ba
 
 </div>
 
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>The plot shows that the age distribution for males and females is very similar - but also indicates that more males use dating applications
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The plot shows that the age distribution for males and females is very similar - but also indicates that more males use dating applications</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -1193,9 +1226,6 @@ Name: height, dtype: int64
 <span class="n">ax1</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">55</span><span class="p">,</span> <span class="mi">85</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Height distribution of OkCupid users'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'The minimum height listed for a female is </span><span class="si">{</span><span class="n">okc</span><span class="o">.</span><span class="n">height</span><span class="p">[</span><span class="n">okc</span><span class="o">.</span><span class="n">sex</span> <span class="o">==</span> <span class="s2">"f"</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="si">}</span><span class="s1"> inches, whilst the minimum male height listed is </span><span class="si">{</span><span class="n">okc</span><span class="o">.</span><span class="n">height</span><span class="p">[</span><span class="n">okc</span><span class="o">.</span><span class="n">sex</span> <span class="o">==</span> <span class="s2">"m"</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="si">}</span><span class="s1"> inches.  We can assume that people did not want to list their height. As heights for both males and females are normally distributed we can leave these minimum and small values in - perhaps a certain zodiac sign prefers not to disclose their height.'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'The heights range from </span><span class="si">{</span><span class="mi">57</span><span class="o">/</span><span class="mi">12</span><span class="si">}</span><span class="s1"> feet to </span><span class="si">{</span><span class="mi">81</span><span class="o">/</span><span class="mi">12</span><span class="si">}</span><span class="s1"> feet, with females having a shorter average height, </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">okc</span><span class="o">.</span><span class="n">height</span><span class="p">[</span><span class="n">okc</span><span class="o">.</span><span class="n">sex</span> <span class="o">==</span> <span class="s2">"f"</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">/</span><span class="mi">12</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s1"> feet,  than males, </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">okc</span><span class="o">.</span><span class="n">height</span><span class="p">[</span><span class="n">okc</span><span class="o">.</span><span class="n">sex</span> <span class="o">==</span> <span class="s2">"m"</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">/</span><span class="mi">12</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s1"> feet'</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1215,11 +1245,43 @@ Name: height, dtype: int64
 
 </div>
 
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Minimum female height: </span><span class="si">{</span><span class="n">okc</span><span class="o">.</span><span class="n">height</span><span class="p">[</span><span class="n">okc</span><span class="o">.</span><span class="n">sex</span> <span class="o">==</span> <span class="s2">"f"</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="si">}</span><span class="s1"> inches'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Minimum male height: </span><span class="si">{</span><span class="n">okc</span><span class="o">.</span><span class="n">height</span><span class="p">[</span><span class="n">okc</span><span class="o">.</span><span class="n">sex</span> <span class="o">==</span> <span class="s2">"m"</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="si">}</span><span class="s1"> inches'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Maximum female height: </span><span class="si">{</span><span class="n">okc</span><span class="o">.</span><span class="n">height</span><span class="p">[</span><span class="n">okc</span><span class="o">.</span><span class="n">sex</span> <span class="o">==</span> <span class="s2">"f"</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="si">}</span><span class="s1"> inches'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Maximum female height: </span><span class="si">{</span><span class="n">okc</span><span class="o">.</span><span class="n">height</span><span class="p">[</span><span class="n">okc</span><span class="o">.</span><span class="n">sex</span> <span class="o">==</span> <span class="s2">"m"</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="si">}</span><span class="s1"> inches'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Average female height: </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">okc</span><span class="o">.</span><span class="n">height</span><span class="p">[</span><span class="n">okc</span><span class="o">.</span><span class="n">sex</span> <span class="o">==</span> <span class="s2">"f"</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s1"> inches'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Average male height: </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">okc</span><span class="o">.</span><span class="n">height</span><span class="p">[</span><span class="n">okc</span><span class="o">.</span><span class="n">sex</span> <span class="o">==</span> <span class="s2">"m"</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s1"> inches'</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>The minimum height listed for a female is 4.0 inches, whilst the minimum male height listed is 1.0 inches.  We can assume that people did not want to list their height. As heights for both males and females are normally distributed we can leave these minimum and small values in - perhaps a certain zodiac sign prefers not to disclose their height.
-The heights range from 4.75 feet to 6.75 feet, with females having a shorter average height, 5.43 feet,  than males, 5.87 feet
+<pre>Minimum female height: 4.0 inches
+Minimum male height: 1.0 inches
+Maximum female height: 95.0 inches
+Maximum female height: 95.0 inches
+Average female height: 65.1 inches
+Average male height: 70.44 inches
 </pre>
 </div>
 </div>
@@ -1230,6 +1292,15 @@ The heights range from 4.75 feet to 6.75 feet, with females having a shorter ave
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The minimum heights listed are 4 inches and 1 inches for females and males, respectively. We can assume that people did not want to list their height.  As heights for both males and females are normally distributed the small values will be left in - perhaps a certain zodiac sign prefers not to disclose their height.
+The average height for females is 65 inches, or 5ft 5in and the average height for males is  5ft 10.5in.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -1281,11 +1352,11 @@ The heights range from 4.75 feet to 6.75 feet, with females having a shorter ave
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">okc_no_income</span> <span class="o">=</span> <span class="p">(</span><span class="n">okc</span><span class="o">.</span><span class="n">income</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
-<span class="n">percent_no_income</span> <span class="o">=</span> <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">okc_no_income</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">okc_no_income</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">okc_no_income</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span> <span class="o">*</span> <span class="mi">100</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">okc_no_income</span> <span class="o">=</span><span class="p">(</span><span class="n">okc</span><span class="o">.</span><span class="n">income</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<span class="n">percent_no_income</span> <span class="o">=</span> <span class="p">(</span><span class="n">okc_no_income</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">okc_no_income</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">okc_no_income</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span> <span class="o">*</span> <span class="mi">100</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'It appears that most people, </span><span class="si">{</span><span class="nb">round</span><span class="p">((</span><span class="n">percent_no_income</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s1"> %, prefer not to disclose their income in their dating profile.  This could be for several reasons such as it is often seen as crass to discuss income, or that people do not want money to be a factor in choosing a date.'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Given this lack of information, income will not be considered when applying models to the data.'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">okc_no_income</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">percent_no_income</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1298,8 +1369,10 @@ The heights range from 4.75 feet to 6.75 feet, with females having a shorter ave
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>It appears that most people, 80.8 %, prefer not to disclose their income in their dating profile.  This could be for several reasons such as it is often seen as crass to discuss income, or that people do not want money to be a factor in choosing a date.
-Given this lack of information, income will not be considered when applying models to the data.
+<pre>True     48440
+False    11504
+Name: income, dtype: int64
+80.80875483784867
 </pre>
 </div>
 </div>
@@ -1313,15 +1386,22 @@ Given this lack of information, income will not be considered when applying mode
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>It appears that most people, 81 %, prefer not to disclose their income in their dating profile.  This could be for several reasons such as it is often seen as crass to discuss income, or that people do not want money to be a factor in choosing a date. Given this lack of information, income will not be considered when applying models to the data.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Discrete-variables">
 <a class="anchor" href="#Discrete-variables" aria-hidden="true"><span class="octicon octicon-link"></span></a>Discrete variables<a class="anchor-link" href="#Discrete-variables"> </a>
 </h2>
+<p>Now we have looked at the continuous variables above, the next section will discuss the discrete variables, which make up the majority of the data.</p>
 <h3 id="Sex">
 <a class="anchor" href="#Sex" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sex<a class="anchor-link" href="#Sex"> </a>
 </h3>
-<ul>
-<li>The gender distribution of the OkCupid profiles has been looked at earlier, and shows that there is a larger proportion of males to females.</li>
-</ul>
+<p>The gender distribution of the OkCupid profiles has been looked at earlier, and shows that there is a larger proportion of males to females.</p>
 
 </div>
 </div>
@@ -1337,8 +1417,6 @@ Given this lack of information, income will not be considered when applying mode
 <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">'equal'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Gender distribution of OkCupid profiles'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">'As seen in the age and height distributions, there are more male users than female.'</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1356,14 +1434,6 @@ Given this lack of information, income will not be considered when applying mode
 <img src="data:image/png;base64,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%0A">
 </div>
 
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>As seen in the age and height distributions, there are more male users than female.
-</pre>
-</div>
 </div>
 
 </div>
