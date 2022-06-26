@@ -466,7 +466,7 @@ canvas { filter: invert(100%); }
 
 li .post-meta-description { color: rgba(255, 255, 255, 0.69) !important; }
 
-.text_cell, .post-title, .site-nav, .site-title, h3, .page-description { font-family: 'Dosis', sans-serif !important; }
+.text_cell, .post-title, .site-nav, .site-title, .page-description, .post-meta-title, .page-content { font-family: 'Dosis', sans-serif !important; }
 
 .language-python + .language-plaintext { border-left: 1px solid grey; margin-left: 1rem !important; }
 
