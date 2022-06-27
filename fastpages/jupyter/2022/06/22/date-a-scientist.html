@@ -8,8 +8,8 @@
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="OKCupid Date-A-Scientist" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="This projects utilises machine learning algorithms in an attempt to predict the zodiac sign of OkCupid users." />
-<meta property="og:description" content="This projects utilises machine learning algorithms in an attempt to predict the zodiac sign of OkCupid users." />
+<meta name="description" content="This projects utilises EDA and supervised machine learning algorithms in an attempt to predict the zodiac sign of OkCupid users." />
+<meta property="og:description" content="This projects utilises EDA and supervised machine learning algorithms in an attempt to predict the zodiac sign of OkCupid users." />
 <link rel="canonical" href="https://lottesofcode.github.io/Portfolio/fastpages/jupyter/2022/06/22/date-a-scientist.html" />
 <meta property="og:url" content="https://lottesofcode.github.io/Portfolio/fastpages/jupyter/2022/06/22/date-a-scientist.html" />
 <meta property="og:site_name" content="Lottes Salter Portfolio" />
@@ -20,7 +20,7 @@
 <meta property="twitter:image" content="https://lottesofcode.github.io/Portfolio/images/OKCupid_Logo.svg.png" />
 <meta property="twitter:title" content="OKCupid Date-A-Scientist" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-06-22T00:00:00-05:00","datePublished":"2022-06-22T00:00:00-05:00","description":"This projects utilises machine learning algorithms in an attempt to predict the zodiac sign of OkCupid users.","headline":"OKCupid Date-A-Scientist","image":"https://lottesofcode.github.io/Portfolio/images/OKCupid_Logo.svg.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://lottesofcode.github.io/Portfolio/fastpages/jupyter/2022/06/22/date-a-scientist.html"},"url":"https://lottesofcode.github.io/Portfolio/fastpages/jupyter/2022/06/22/date-a-scientist.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-06-22T00:00:00-05:00","datePublished":"2022-06-22T00:00:00-05:00","description":"This projects utilises EDA and supervised machine learning algorithms in an attempt to predict the zodiac sign of OkCupid users.","headline":"OKCupid Date-A-Scientist","image":"https://lottesofcode.github.io/Portfolio/images/OKCupid_Logo.svg.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://lottesofcode.github.io/Portfolio/fastpages/jupyter/2022/06/22/date-a-scientist.html"},"url":"https://lottesofcode.github.io/Portfolio/fastpages/jupyter/2022/06/22/date-a-scientist.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/Portfolio/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://lottesofcode.github.io/Portfolio/feed.xml" title="Lottes Salter Portfolio" /><link rel="shortcut icon" type="image/x-icon" href="/Portfolio/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -75,13 +75,13 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">OKCupid Date-A-Scientist </h1><p class="page-description">This projects utilises machine learning algorithms in an attempt to predict the zodiac sign of OkCupid users. </p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-06-22T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">OKCupid Date-A-Scientist </h1><p class="page-description">This projects utilises EDA and supervised machine learning algorithms in an attempt to predict the zodiac sign of OkCupid users. </p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-06-22T00:00:00-05:00" itemprop="datePublished">
         Jun 22, 2022
       </time>
        • <span class="read-time" title="Estimated read time">
     
     
-      37 min read
+      38 min read
     
 </span></p>
 
@@ -184,7 +184,13 @@ window.onload = wrap_img;
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#NLP-and-Naive-Bayes">NLP and Naive Bayes </a></li>
-<li class="toc-entry toc-h2"><a href="#Results-and-Evaluation">Results and Evaluation </a></li>
+<li class="toc-entry toc-h2"><a href="#Evaluation">Evaluation </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Results">Results </a></li>
+<li class="toc-entry toc-h3"><a href="#Conclusion">Conclusion </a></li>
+<li class="toc-entry toc-h3"><a href="#Next-steps">Next steps </a></li>
+</ul>
+</li>
 </ul><!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
@@ -217,7 +223,7 @@ Zodiac signs have been identified as an important attribute in the dating world,
 <h3 id="Analysis">
 <a class="anchor" href="#Analysis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Analysis<a class="anchor-link" href="#Analysis"> </a>
 </h3>
-<p>Visualisation and descriptive statistical methods will be used to understand the data, before building and applying four machine learning classification algorithms:</p>
+<p>Visualisation and descriptive statistical methods will be used to understand the data, before building and applying four supervised machine learning classification algorithms:</p>
 <ul>
 <li>Linear regression</li>
 <li>K-nearest neighbors</li>
@@ -4556,9 +4562,56 @@ Name: sign_int, dtype: float64
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Results-and-Evaluation">
-<a class="anchor" href="#Results-and-Evaluation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results and Evaluation<a class="anchor-link" href="#Results-and-Evaluation"> </a>
+<h2 id="Evaluation">
+<a class="anchor" href="#Evaluation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Evaluation<a class="anchor-link" href="#Evaluation"> </a>
 </h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Results">
+<a class="anchor" href="#Results" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results<a class="anchor-link" href="#Results"> </a>
+</h3>
+<p>The success of each machine learning algorithm, in predicting as OkCupid users zodiac sign were:</p>
+<ul>
+<li>Linear Regression: 8.5 %</li>
+<li>K-Nearest Neighbor: 9.1 %</li>
+<li>Random Forest: 9.3 %</li>
+<li>Naive Bayes: 8.9 %</li>
+</ul>
+<p>All models have a success rate lower than 10%, which makes them all highly unsuccessful.  Reasons for this, and suggestions for improvements are discussed below.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Conclusion">
+<a class="anchor" href="#Conclusion" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conclusion<a class="anchor-link" href="#Conclusion"> </a>
+</h3>
+<p>The goal of this project was to accurately predict the zodiac signs of OkCupid users from information provided in their profile by implementing supervised machine learning classification models.  Four different algorithms were utilised (linear regression, K-nearest neighbor, random forest and Naive Bayes classifier), with none achieving a success rate above 8-9 %.  As there are 12 zodiac signs, a random guess has a 1 in 12 (or 8%) chance of being correct.  This shows that a person guessing a zodiac sign has the same odds of guessing correctly as the machine learning model.</p>
+<p>The conclusion we can take from this is that a person's lifestyle choices and behaviours are not governed by their zodiac sign, meaning it is not possible to predict their zodiac sign from the data within a person's OkCupid profile.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Next-steps">
+<a class="anchor" href="#Next-steps" aria-hidden="true"><span class="octicon octicon-link"></span></a>Next steps<a class="anchor-link" href="#Next-steps"> </a>
+</h3>
+<p>This project could be further investigated by:</p>
+<ul>
+<li>Obtaining a larger dataset, as with more information the models may have greater success in learning the difference between the features of the 12 classes.</li>
+<li>As there are 12 zodiac signs, the number cannot be decreased.  However the question posed to the ML model could be simplified/made binary i.e. Is a user a capricorn?</li>
+<li>Are there better ways to preprocess or visualise the data?</li>
+<li>Are there other aspects of the data a machine learning algorithm could investigate, such as can you predict a users sex, religion or drink/drug habits?</li>
+</ul>
+
 </div>
 </div>
 </div>
