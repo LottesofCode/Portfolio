@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      40 min read
+      39 min read
     
 </span></p>
 
@@ -146,7 +146,7 @@ window.onload = wrap_img;
 </li>
 <li class="toc-entry toc-h2"><a href="#Exploring-the-data">Exploring the data </a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#Zodiac-sign-data">Zodiac sign data </a></li>
+<li class="toc-entry toc-h3"><a href="#Zodiac-signs">Zodiac signs </a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#Continuous-variables">Continuous variables </a>
@@ -160,7 +160,7 @@ window.onload = wrap_img;
 <ul>
 <li class="toc-entry toc-h3"><a href="#Sex">Sex </a></li>
 <li class="toc-entry toc-h3"><a href="#Diet-and-body">Diet and body </a></li>
-<li class="toc-entry toc-h3"><a href="#Lifestyle-choices:">Lifestyle choices: </a></li>
+<li class="toc-entry toc-h3"><a href="#Lifestyle-choices">Lifestyle choices </a></li>
 <li class="toc-entry toc-h3"><a href="#Education-and-employment">Education and employment </a></li>
 <li class="toc-entry toc-h3"><a href="#Pets-and-orientation">Pets and orientation </a></li>
 <li class="toc-entry toc-h3"><a href="#Religion">Religion </a></li>
@@ -206,7 +206,7 @@ window.onload = wrap_img;
 <h2 id="Introduction">
 <a class="anchor" href="#Introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction<a class="anchor-link" href="#Introduction"> </a>
 </h2>
-<p>In recent years, there has been a massive rise in the usage of dating apps to find love. Many of these apps use sophisticated data science techniques to recommend possible matches to users and to optimize the user experience. These apps give us access to a wealth of information that we’ve never had before about how different people experience romance.</p>
+<p>In recent years, there has been a massive rise in the usage of dating apps to find love. Many of these apps use sophisticated data science techniques to recommend possible romantic matches and optimize the user experience. These apps give us access to a wealth of information that we’ve never had before about how different people experience romance.</p>
 <h3 id="Scope">
 <a class="anchor" href="#Scope" aria-hidden="true"><span class="octicon octicon-link"></span></a>Scope<a class="anchor-link" href="#Scope"> </a>
 </h3>
@@ -214,12 +214,12 @@ window.onload = wrap_img;
 <h3 id="Project-Goals">
 <a class="anchor" href="#Project-Goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project Goals<a class="anchor-link" href="#Project-Goals"> </a>
 </h3>
-<p>There are two primary goals for this project. The first is to perform EDA (scoping, initial analysis and investigation) on the data, which will then be cleaned and prepared for use in several machine learning algorithms. The second goal is to use this data to see if it is possible to determine  the zodiac sign of an user on OkCupid, using the information provided in their profile.
+<p>There are two primary goals for this project. The first is to perform EDA - scoping, initial analysis and investigation) on the data, which will then be cleaned and prepared for use in several supervised machine learning algorithms. The second goal is to use this data to see if it is possible to determine the zodiac sign of a OkCupid member, using the information provided in their profile.
 Zodiac signs have been identified as an important attribute in the dating world, and as a portion of profiles do not provide this information, it would be useful for OkCupid to predict missing zodiac signs, in order to increase the likelihood of successful dating matches.</p>
 <h3 id="Data">
 <a class="anchor" href="#Data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data<a class="anchor-link" href="#Data"> </a>
 </h3>
-<p>The data is included within <code>profiles.csv</code>, which has been provided by Codecademy <sup id="fnref-3" class="footnote-ref"><a href="#fn-3">3</a></sup>.  The columns each contain answers to a multiple choice question or a short-essay style question, with each row representing an OkCupid user/profile.   The data contains 59946 rows (each representing an individual OkCupid user) and 31 columns.  The columns contain information about the age, body type, diet, alcohol and drug consumption, education level, job and income, ethnicity, height, children and pets, sexual orientation, sex, zodiac sign and spoken languages.</p>
+<p>The data is included within <code>profiles.csv</code>, which has been provided by Codecademy <sup id="fnref-3" class="footnote-ref"><a href="#fn-3">3</a></sup>.  T   The data contains 59946 rows (each representing an individual OkCupid user) and 31 columns.  The columns contain information about the age, body type, diet, alcohol and drug consumption, education level, job and income, ethnicity, height, children and pets, sexual orientation, sex, zodiac sign and spoken languages as well as answers to several multiple choice or short-essay style questions.</p>
 <h3 id="Analysis">
 <a class="anchor" href="#Analysis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Analysis<a class="anchor-link" href="#Analysis"> </a>
 </h3>
@@ -602,8 +602,9 @@ Number of rows = 59946
 <li>
 <strong>essay0</strong> - My self-summary</li>
 <li>
-<strong>essay1</strong> - What I’m doing with my life
-<strong>*essay2</strong> - I’m really good at…</li>
+<strong>essay1</strong> - What I’m doing with my life</li>
+<li>
+<strong>essay2</strong> - I’m really good at…</li>
 <li>
 <strong>essay3</strong> - The first thing people usually notice about me…</li>
 <li>
@@ -791,8 +792,8 @@ Number of rows = 59946
 <h2 id="Exploring-the-data">
 <a class="anchor" href="#Exploring-the-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exploring the data<a class="anchor-link" href="#Exploring-the-data"> </a>
 </h2>
-<h3 id="Zodiac-sign-data">
-<a class="anchor" href="#Zodiac-sign-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Zodiac sign data<a class="anchor-link" href="#Zodiac-sign-data"> </a>
+<h3 id="Zodiac-signs">
+<a class="anchor" href="#Zodiac-signs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Zodiac signs<a class="anchor-link" href="#Zodiac-signs"> </a>
 </h3>
 <p>First we will take a look at the zodiac sign data within the dataframe.</p>
 
@@ -836,7 +837,7 @@ Number of rows = 59946
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>There appears to be 48 answers to the 'What is your zodiac sign?' question.
-As we know there are only 12 possible signs, this data must be looked at more closely.</p>
+As there are only 12 possible signs, this data must be looked at more closely.</p>
 
 </div>
 </div>
@@ -910,8 +911,7 @@ As we know there are only 12 possible signs, this data must be looked at more cl
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The data contains information about how important a zodiac sign is to the user for a potential match.  Whilst this is interesting information, 48 different answers will make the analysis time-consuming, so the sign will be extracted into a new column.
-'The signs are quantified with the importance of zodiac signs to an OkCupid user. Whilst this is interesting information, intially it is best to remove this data and place the cleaned zodiac sign in a new column. Creating a new column means the sign importance data is retained for future use, if required.</p>
+<p>The signs are quantified with the importance of zodiac signs to an OkCupid user. Whilst this is interesting information, intially it is best to remove this data and place the cleaned zodiac sign in a new column. Creating a new column means the sign importance data is retained for future use, if required.</p>
 
 </div>
 </div>
@@ -958,8 +958,7 @@ As we know there are only 12 possible signs, this data must be looked at more cl
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The 12 unique zodiac signs are now correctly labelled in the okc.sign_clean column.
-The below plot shows the amount of each zodiac sign.  The data appears fairly balanced, with capricorn representing slightly less of the users.</p>
+<p>The 12 unique zodiac signs are now correctly labelled in the <code>okc.sign_clean</code> column and the spread is represented in the plot below.  The data appears fairly balanced, with capricorn representing slightly less of the users.</p>
 
 </div>
 </div>
@@ -1103,7 +1102,7 @@ Minimum age: 18
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The mean age of users is 32 years old, with 90% of the data lying below 46 years. The maximum age is 110 years old, which is either impressive, someone didn't want to disclose their age, or is an error.  This outlier causes the already left-skewed data to be further skewed.  Therefore, the two outliers, at 109 and 110 are best removed in order to minimise their effect on the total distribution of the data, and this the statistical analysis.</p>
+<p>The mean age of users is 32 years old, with 90% of the data lying below 46 years. The maximum age is 110, which is either impressive, someone didn't want to disclose their age, or is an error.  This outlier causes the already left-skewed data to be further skewed.  Therefore, the two outliers, at 109 and 110, are best removed in order to minimise their effect on the total distribution of the data, and thus the statistical analysis.</p>
 
 </div>
 </div>
@@ -1151,7 +1150,7 @@ Minimum age: 18
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The plot shows that the age distribution for males and females is very similar - but also indicates that more males use dating applications</p>
+<p>The plot shows that the age distribution for males and females is very similar - but also indicates that more males than females use OkCupid.</p>
 
 </div>
 </div>
@@ -1345,7 +1344,7 @@ Average male height: 70.44 inches
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The minimum heights listed are 4 inches and 1 inches for females and males, respectively. We can assume that people did not want to list their height.  As heights for both males and females are normally distributed the small values will be left in - perhaps a certain zodiac sign prefers not to disclose their height.
+<p>The minimum heights listed are 4 inches and 1 inches for females and males, respectively. We can assume that people did not want to list their height in their profiles.  As heights for both males and females are normally distributed the small values will not be removed - perhaps a certain zodiac sign prefers not to disclose their height.
 The average height for females is 65 inches, or 5ft 5in and the average height for males is  5ft 10.5in.</p>
 
 </div>
@@ -1440,7 +1439,7 @@ Name: income, dtype: int64
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>It appears that most people, 81 %, prefer not to disclose their income in their dating profile.  This could be for several reasons such as it is often seen as crass to discuss income, or that people do not want money to be a factor in choosing a date. Given this lack of information, income will not be considered when applying models to the data.</p>
+<p>It appears that most people, 81 %, prefer not to disclose their income in their dating profile.  This could be for several reasons, such as it is often seen as crass to discuss income, or that people do not want money to be a factor in choosing a date. Given this lack of information, income will not be considered when applying models to the data.</p>
 
 </div>
 </div>
@@ -1455,7 +1454,7 @@ Name: income, dtype: int64
 <h3 id="Sex">
 <a class="anchor" href="#Sex" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sex<a class="anchor-link" href="#Sex"> </a>
 </h3>
-<p>The gender distribution of the OkCupid profiles has been looked at earlier, and shows that there is a larger proportion of males to females.  The data does not include any trans or non-binary labels, which could indicate that the profiles in the data did not include these groups, only binary options were given or only sex at birth were considered.</p>
+<p>The sex distribution of the OkCupid profiles shows that there is a larger proportion of males to females.  The data does not include any trans or non-binary labels, which could indicate that perhaps the profiles in the data did not include these groups, only binary options were available or only sex at birth were considered.</p>
 
 </div>
 </div>
@@ -1531,7 +1530,7 @@ Name: income, dtype: int64
 <h3 id="Diet-and-body">
 <a class="anchor" href="#Diet-and-body" aria-hidden="true"><span class="octicon octicon-link"></span></a>Diet and body<a class="anchor-link" href="#Diet-and-body"> </a>
 </h3>
-<p>OkCupid can list their body type and diet choices in their profiles. The diet answers have qualifying information such as "strictly" or "mostly".  This information is removed into a new column, diet_clean, in order to simplify this variable.</p>
+<p>OkCupid users can list their body type and diet choices in their profiles. The diet answers have qualifying information such as "strictly" or "mostly".  As with the zodiac signs, this information will be removed and a new column <code>diet_clean</code> made to contain only diet preferences.</p>
 
 </div>
 </div>
@@ -1625,10 +1624,10 @@ Name: income, dtype: int64
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Lifestyle-choices:">
-<a class="anchor" href="#Lifestyle-choices:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lifestyle choices:<a class="anchor-link" href="#Lifestyle-choices:"> </a>
+<h3 id="Lifestyle-choices">
+<a class="anchor" href="#Lifestyle-choices" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lifestyle choices<a class="anchor-link" href="#Lifestyle-choices"> </a>
 </h3>
-<p>Could a users smoking, drinking and drug habits predict their zodiac sign?</p>
+<p>Could a users smoking, drinking and drug habits be influenced by their zodiac sign?</p>
 
 </div>
 </div>
@@ -1829,8 +1828,8 @@ Name: education, dtype: int64
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>There are a lot of options within the education column, with the majority of answers pointing to user graduating from or attending college/university. As the variable is dominated by people attending/completing college, this variable will not be used within the model.  It is of note that space camp seems to be unusually popular.
-There is a range of employments, with no one industry dominating the answers, therefore this can be included in the model.</p>
+<p>There are a lot of options within the education column, with the majority of answers indictating users graduating from or attending college/university. As the variable is dominated by people attending/completing college, it will not be used within the model.  It is of note that space camp seems to be strangely popular.
+There is a range of employments, with no one industry dominating the answers, therefore this will be included in the model.</p>
 
 </div>
 </div>
@@ -1918,8 +1917,8 @@ The percentage of users that identify as straight: 86.09 %
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>93% of users identify as single, which is unsurprising as OkCupid is a dating site.  OkCupid also lets people identify as polyamorous or in open relationships, which accounts for the 7% that do not identify as single.  As the 'single' result dominates the answers, status will not be used in the model.
-The poll in the US on sexual orientation <sup id="fnref-1" class="footnote-ref"><a href="#fn-1">1</a></sup> found that 7.1% of people identified as LGBT.  The OkCupid data shows 14% of people identify in this category.  As this is twice the poll average, orientation will be included within the model.</p>
+<p>93% of users identify as single, which is unsurprising as OkCupid is a dating site.  OkCupid also lets people identify as polyamorous or in open relationships, which accounts for the 7% that are not single.  As the 'single' result dominates the answers, the relationship status variable will not be used in the model.
+A poll in the US on sexual orientation <sup id="fnref-1" class="footnote-ref"><a href="#fn-1">1</a></sup> found that 7.1% of people identified as LGBT.  The OkCupid data shows 14% of people identify in this category.  As this is twice the poll average it may be of benefit to the model so orientation will be included.</p>
 <p></p>
 <div class="footnotes"><p id="fn-1">1. Gallop poll<a href="#fnref-1" class="footnote footnotes">↩</a></p></div>
 
@@ -1975,7 +1974,7 @@ The poll in the US on sexual orientation <sup id="fnref-1" class="footnote-ref">
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Most users appear to like both cats and dogs, with those liking dogs making up the second most popular answer.  Most people do not have children (with qualifying information whether they want them in the future or not).  Given the average age and the fact it is a dating site, it is unsurprising most people do not have children.</p>
+<p>Most users appear to like both cats and dogs, with those liking dogs making up the second most popular answer.  Most people do not have children (with qualifying information whether they want them in the future or not).  Given the average age and the fact it is a dating site, it is unsurprising most people do not have children.  The offspring data will not be included in the model as it is not easily simplified, thus making it hard for the model to learn anything from.</p>
 
 </div>
 </div>
@@ -2038,7 +2037,7 @@ The poll in the US on sexual orientation <sup id="fnref-1" class="footnote-ref">
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As with the zodiac data, the religion column also contains qualifying information.  The data has been cleaned into a new column, religion_clean, to remove the qualifying data.  There seems to be a spread of religions, with no one answer dominating the data.</p>
+<p>As with the zodiac data, the religion column also contains qualifying information.  The data has been cleaned into a new column <code>religion_clean</code> to remove the qualifying data.  There seems to be a spread of religions, with no one answer dominating the data.</p>
 
 </div>
 </div>
@@ -2274,7 +2273,7 @@ dtype: int64
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The null values within the data need to be addressed. As the model will be looking at zodiac signs, the NaN values in the sign_clean column are best removed.  As there are not a large number of null values (9% and 14%, respectively) in the body_type and job columns, these null values will also be dropped.</p>
+<p>The null values within the data need to be addressed. As the model will be looking at zodiac signs, the NaN values in the <code>sign_clean</code> column are best removed.  As there are not a large number of null values (9% and 14%, respectively) in the <code>body_type</code> and <code>job</code> columns, these null values will also be dropped.</p>
 
 </div>
 </div>
@@ -2503,7 +2502,7 @@ job
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>If null values were removed from diet_clean, religion_clean and pets then a large chunk of the data would be removed (over 40%).</p>
+<p>If null values were removed from <code>diet_clean</code>, <code>religion_clean</code> and <code>pets</code> then a large chunk of the data would be removed (over 40%).</p>
 
 </div>
 </div>
@@ -3024,7 +3023,7 @@ dtype: int64
 <h3 id="Labels">
 <a class="anchor" href="#Labels" aria-hidden="true"><span class="octicon octicon-link"></span></a>Labels<a class="anchor-link" href="#Labels"> </a>
 </h3>
-<p>The zodiac signs are the labels for the model.  They will be converted into numerical values for use in the models.</p>
+<p>The zodiac signs are the labels for the model so will be converted into numerical values.</p>
 
 </div>
 </div>
@@ -3075,7 +3074,7 @@ dtype: int64
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Import library to split the data for testing and training</p>
+<p>Import library to split the data for testing and training.</p>
 
 </div>
 </div>
@@ -3100,7 +3099,7 @@ dtype: int64
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The data will be split 80% for training the model and 20% for validating the model</p>
+<p>The data will be split 80% for training the model and 20% for validating the model.</p>
 
 </div>
 </div>
@@ -3151,7 +3150,7 @@ dtype: int64
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Converting the y data into an array</p>
+<p>Converting the y data into an array.</p>
 
 </div>
 </div>
@@ -3183,7 +3182,7 @@ dtype: int64
 <h3 id="Logistic-Regression">
 <a class="anchor" href="#Logistic-Regression" aria-hidden="true"><span class="octicon octicon-link"></span></a>Logistic Regression<a class="anchor-link" href="#Logistic-Regression"> </a>
 </h3>
-<p>Logistic regression is a machine learning algorithm that predicts the probability, ranging from 0 to 1, of a datapoint belonging to a specific category.  These probabilities are used to classify/assign the observations to the more probable group.  An example of this is using a logistic regression model to predict the probability that an incoming email is spam.  If the probability is greater than 0.5, the email could automatically be sent to the spam folder.  The email is example is called binary classification as there are only two groups (i.e. spam or not spam).</p>
+<p>Logistic regression is a machine learning algorithm that predicts the probability (ranging from 0 to 1) of a datapoint belonging to a specific category.  These probabilities are used to classify/assign the observations to the more probable group.  An example of this is using a logistic regression model to predict the probability that an incoming email is spam.  If the probability is greater than 0.5, the email could automatically be sent to the spam folder.  The email is example is called binary classification as there are only two groups (i.e. spam or not spam).</p>
 <p>As the zodiac data is not binary, a 'multinomial' argument can be passed to the model, so that it may classify more than 2 groups.</p>
 
 </div>
@@ -3398,7 +3397,7 @@ dtype: int64
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Like with the logistic regression model, the success at predicting a zodiac sign is between 8 and 9 %.  This is, again, highly inaccurate, so the  measures of algorithm effectiveness are investigated below.</p>
+<p>Like with the logistic regression model, the success at predicting a zodiac sign is between only 8 and 9 %.  This is, again, highly inaccurate, so the measures of algorithm effectiveness are investigated below.</p>
 
 </div>
 </div>
@@ -3454,7 +3453,7 @@ dtype: int64
 <h3 id="Number-of-neighbours">
 <a class="anchor" href="#Number-of-neighbours" aria-hidden="true"><span class="octicon octicon-link"></span></a>Number of neighbours<a class="anchor-link" href="#Number-of-neighbours"> </a>
 </h3>
-<p>The number of neighbors could affect the accuracy of the model.  Therefore, the model will be run with number of neighbors from 1 to 100, to see if the model can increase predictive accuracy, and also reveal the number of neighbors that gives the highest prediction success.</p>
+<p>The number of neighbors could affect the accuracy of the model.  Therefore, the model will be run with number of neighbors from 1 to 100, to see if we can increase predictive accuracy, and also reveal the number of neighbors that gives the highest prediction success.</p>
 
 </div>
 </div>
@@ -3646,8 +3645,7 @@ dtype: int64
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#plt.show()</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">accuracy_values</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">accuracy_values</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -3685,7 +3683,7 @@ dtype: int64
 <h3 id="Decision-Tree">
 <a class="anchor" href="#Decision-Tree" aria-hidden="true"><span class="octicon octicon-link"></span></a>Decision Tree<a class="anchor-link" href="#Decision-Tree"> </a>
 </h3>
-<p>A decision tree model can be used to predict a class or value of a target variable by learning simple decision rules which are inferred from the training data.  The number of trees is given by the n_estimators parameter.</p>
+<p>A decision tree model can be used to predict the class or value of a target variable by learning simple decision rules which are inferred from the training data.  The number of trees is given by the n_estimators parameter.</p>
 
 </div>
 </div>
@@ -4001,7 +3999,7 @@ dtype: int64
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The decision tree model has no greater success than linear regression or k-nearest neighbor in predicting the zodiac sign of an OkCupid user, with all models having a success rate of &gt;9 %.</p>
+<p>The decision tree model had no greater success than linear regression or k-nearest neighbor in predicting the zodiac sign of an OkCupid user, with all models having a success rate of &gt; 10 %.</p>
 
 </div>
 </div>
@@ -4507,8 +4505,14 @@ dtype: int64
 </div>
     
 
-Preparing the data for use in Naive Bayes analysis, through definition of a function that will tokenize, stem and lemmatize the text, as well as removing stop words.
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Preparing the data for use in Naive Bayes analysis, through definition of a function that will tokenize, stem and lemmatize the text, as well as removing stop words.</p>
 
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -4804,7 +4808,7 @@ Name: sign_int, dtype: float64
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Again, the confusion matrix shows that the model is highly unsuccessful in predicting zodiac signs as it has struggled to make a distinction between any of the zodiac signs.</p>
+<p>Again, the confusion matrix shows that the model is highly unsuccessful in predicting zodiac signs as it has struggled to make a distinction between any of the signs.</p>
 <p>All the machine learning models above have failed to adequately predict zodiac signs.  This will be discussed in the results and evaluation section below.</p>
 
 </div>
@@ -4843,7 +4847,7 @@ Name: sign_int, dtype: float64
 <h3 id="Conclusion">
 <a class="anchor" href="#Conclusion" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conclusion<a class="anchor-link" href="#Conclusion"> </a>
 </h3>
-<p>The goal of this project was to accurately predict the zodiac signs of OkCupid users from information provided in their profile by implementing supervised machine learning classification models.  Four different algorithms were utilised (linear regression, K-nearest neighbor, random forest and Naive Bayes classifier), with none achieving a success rate above 8-9 %.  As there are 12 zodiac signs, a random guess has a 1 in 12 (or 8%) chance of being correct.  This shows that a person guessing a zodiac sign has the same odds of guessing correctly as the machine learning model.</p>
+<p>The goal of this project was to accurately predict the zodiac signs of OkCupid users from information provided in their profile through implementation of supervised machine learning classification models.  Four different algorithms were utilised (linear regression, K-nearest neighbor, random forest and Naive Bayes classifier), with none achieving a success rate above 8-9 %.  As there are 12 zodiac signs, a random guess has a 1 in 12 (or 8%) chance of being correct.  This shows that a person guessing a zodiac sign has the same odds of guessing correctly as the machine learning model.</p>
 <p>The conclusion we can take from this is that a person's lifestyle choices and behaviours are not governed by their zodiac sign, meaning it is not possible to predict their zodiac sign from the data within a person's OkCupid profile.</p>
 
 </div>
