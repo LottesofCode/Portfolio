@@ -4,7 +4,7 @@ layout: post
 description: SQL exploration of Road Accident Data.
 categories: [markdown]
 Title: UK Road Traffic Accidents Severity 2016-2020
-image: images/images.png
+image: images/Screenshot 2022-08-26 151756.png
 
 
 
