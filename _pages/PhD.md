@@ -15,7 +15,7 @@ The aim of my PhD was to improve the understanding of magnesium’s behaviour wh
 
 # The Science
 
-In the terrestrial atmosphere the peak concentration of Mg+ ions  lie at higher altitudes (90 - 100 km) than the neutral Mg atoms (~89 km).   This difference in altitudes means the key reactions for atoms and ions will differ, as shown in the figure below. 
+In the terrestrial atmosphere the peak concentration of Mg$p(X\_t = +)$ ions  lie at higher altitudes (90 - 100 km) than the neutral Mg atoms (~89 km).   This difference in altitudes means the key reactions for atoms and ions will differ, as shown in the figure below. 
  
 ![]({{site.baseurl}}/images/reactscheme.png "Reaction Scheme")
 
