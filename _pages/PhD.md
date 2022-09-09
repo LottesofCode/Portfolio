@@ -21,11 +21,11 @@ In the terrestrial atmosphere the peak concentration of Mg+ ions lie at higher a
 
 ## Experimental  
 
-If you would like to read further into the ion reactions, you can find my published journal article **[here]([https://pubs.rsc.org/en/content/articlelanding/2011/cp/c0cp02637a])** [^1].
+If you would like to read further into the ion reactions, you can find my published journal article **[here]([https://pubs.rsc.org/en/content/articlelanding/2011/cp/c0cp02637a])**
 
 
 
-[^1]:A kinetic study of Mg+ and Mg-containing ions reacting with O3, O2, N2, CO2, N2O and H2O: implications for magnesium ion chemistry in the upper atmosphere.
+
 
 
 
