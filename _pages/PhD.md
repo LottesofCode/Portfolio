@@ -32,6 +32,20 @@ Mg⁺ + O₃ → MgO⁺ + O₂
 Mg⁺ + N₂O (+ He) → Mg⁺.N₂O (+ He)  
 Mg⁺ + X (+ He) → Mg⁺.X (+ He) (where X = O₂, CO₂, H₂O and N₂)  
 
+Mg+ was monitored at an increasing time-delay so that a sufficient decay profile could be built up, as shown below.
+
+[PIC OF DECAY]
+
+The loss of Mg+ ions can be described by the pseudo first-order decay coefficient k′ as, during experiments, the concentration of the reactant and bath gases were kept well in excess of Mg+. For reactions with O3 :
+
+![]({{site.baseurl}}/images/ko3.png)	
+
+and for the other reactions:
+
+![]({{site.baseurl}}/images/kx.png)
+
+where kX is the rate coefficient for the reaction of Mg+ ions with the selected reactant; kDiffMg+ describes the diffusion of the Mg+ ions out of the volume defined by the intersection of the laser beams within the field of view of the photomultiplier tube; kMgX is the rate coefficient for the reaction between Mg+ and either the organometallic precursor or any degradation/photolysis products. The value of kDiffMg+ + kMgX was determined from a fit of the decay when the concentration of reactant equalled zero. These two terms combined varied from 3000 – 20000 s-1 depending upon the conditions and heat pipe temperature for a particular experiment. As kDiffMg+ is typically less than 1000 s-1 at the pressures of He employed (calculated using E2.4), the dependence of the intercept on heat pipe temperature is consistent with the reaction of Mg+ with the Mg precursor vapour being the major removal process for Mg+ in the absence of reactant.
+The pseudo first order rate coefficient, k′, was obtained by fitting the experimental decay to a simple single exponential form, A + B-k′t as illustrated by the solid line in the figure above.
 
 
 
