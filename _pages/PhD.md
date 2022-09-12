@@ -25,6 +25,7 @@ The aim of the experimental systems was to make gas phase kinetic measurements s
 Two experimental systems were utilised; PLP/LIF (pulsed laser photolysis/ laser induced fluorescence) and a fast flow tube. These will not be discussed in detail here, but I gained a vast amount of experience using lasers, pumps, timing instruments, vacuum systems and a mass spectrometer.  I will not discuss these systems here, however, detailed experimental setups are available in [my publications](https://www.linkedin.com/in/lottes-salter/details/publications/). 
 
 ## Analysis
+### PLP/LIF
 
 The following reactions were studied in the PLP/LIF system:
 
@@ -46,6 +47,8 @@ and for the other reactions:
 
 where _kₓ_ is the rate coefficient for the reaction of Mg⁺ ions with the selected reactant; _k<sub>DiffMg⁺</sub>_ describes the diffusion of the Mg⁺ ions out of the volume defined by the intersection of the laser beams within the field of view of the detector; _k<sub>MgX</sub>_ is the rate coefficient for the reaction between Mg⁺ and either the organometallic precursor or any degradation/photolysis products. The value of _k<sub>DiffMg⁺</sub>_ + _k<sub>MgX</sub>_ was determined from a fit of the decay when the concentration of reactant equalled zero. The pseudo first order rate coefficient, k′, was obtained by fitting the experimental decay to a simple single exponential form, A + B_<sup>-k′t</sup>_ as illustrated by the solid line in the above figure. 
 
+### Fast Flow Tube
+
 Reactions in the flow tube can be complicated as several reactions and processes are occurring at once. Therefore in order to determine rate coefficients for the reactions studied it was essential to use a numerical model. The model takes into account any gas phase chemistry occurring, diffusion and loss to the walls of Mg⁺/Mg-containing species and, if necessary, any reactants. The changes in concentration down the flow tube of the species of interest were calculated by integrating coupled ordinary differential equations using a [fourth-order Runge-Kutta numerical integration scheme](https://assets.cambridge.org/97805218/80688/frontmatter/9780521880688_frontmatter.pdf). The integration was split into several parts, corresponding to each reaction zone, in which a specific amount of reactants were present. For each reaction zone the reaction time was calculated and the integration was performed over that time. In order to obtain the required rate coefficient, kx, for magnesium ion work the experimental data points were compared with calculated data points to generate a fitting parameter, χ²;
 
 ![]({{site.baseurl}}/images/chisqu.png)	
@@ -55,10 +58,10 @@ the larger the associated error. If an un-weighted fit was required then the wei
 
 ![]({{site.baseurl}}/images/weightchisqu.png)	
 
-where errori is the standard deviation obtained when calculating the average concentration for each data point. Calculations over a range of kx are run, so that a
-minimum value for χ² could be obtained and therefore an optimal value for kx. The model takes into account the initial conventration of [Mg⁺] at the ablation target or [Mg] at the crucible heater. However, these were not experimentally measured, and therefore had to be calculated during the modelling process. The main method resulted in the experimental data being normalised so that the relative concentration of Mg⁺, Mg or magnesium ion species of interest was unity when no reactants were present.
+where _errori_ is the standard deviation obtained when calculating the average concentration for each data point. Calculations over a range of _k<sub>x</sub>_ are run, so that a minimum value for χ² could be obtained and therefore an optimal value for _k<sub>x</sub>_ . The model takes into account the initial conventration of Mg⁺ or Mg. However, these were not experimentally measured, and therefore had to be calculated during the modelling process. The main method resulted in the experimental data being normalised so that the relative concentration of Mg⁺, Mg or magnesium ion species of interest was unity when no reactants were present.
+  
 Then, in order to allow the model results to be directly comparable with the experimental results, a scaling procedure was used to find the value for the initial
-[Mg⁺] or [Mg] which resulted in a final concentration of unity at the mass spectrometer or LIF detection cell. If this method could not be employed then the
+Mg⁺ or Mg concentration, which resulted in a final concentration of unity at the mass spectrometer or LIF detection cell. If this method could not be employed then the
 initial magnesium concentration had to be included as a second fitting parameter, which required a 2-dimensional minimisation model. 
 
 This model was written in FORTRAN and I worked on updating, improving and modifying the code in order to analyse all of my experimental data. An example of the differential equations solved by the model (for the reaction Mg<sup>+</sup>.X + Y) are shown below:
@@ -69,5 +72,18 @@ The model output a best-fit to the data (solid line), error margins (dashed line
 
 ![]({{site.baseurl}}/images/modefit.png)	
 
+## Results
+
+There were a lot of interesting results obtained from my work and I won't go into all of them here - more, I will touch upon the most interesting points. 
+
+### Earth's atmosphere
+
+As mentioned above there is a large Mg+/Mg ratio, that could only be explained by a difference in chemistry, compared to other meteoric metals. 
+
+QUICK GUFFINS ABOUT WHY THERE IS A RATIO
+
+LEADS ONTO MARS ATMOSPHERE LAYERS 
+
+FINAL RELINKIES TO PUBLISHED WORK
 
 
