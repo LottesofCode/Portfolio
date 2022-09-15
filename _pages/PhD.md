@@ -96,11 +96,12 @@ During a three-body reaction the third body acts to remove excess energy from th
 
 This collision with the third body removes the excess energy from the excited complex, thus stabilising it. Generally, the greater the number of internal degrees of freedom a third body possesses the more efficient it will be as energy can be more easily redistributed. The more efficient the removal of energy from the excited complex the faster the rate coefficient is observed to be. 
 
-![]({{site.baseurl}}/images/Lindemanndiagram.png)	
+![]({{site.baseurl}}/images/Lindemanndiagram.png 'Typical potential energy curve for an association reaction, shown for Mg<sup>+</sup> + X + M.')	
 
 CO<sub>2</sub>, as a three atom molecule, has a greater number of internal degrees of freedom than He. It will therefore act more efficiently as a third body, and rate coefficients for reactions with CO<sub>2</sub> as a third body will be faster than the comparable reaction with He as a third body. Previous models of the Martian sporadic layers have used rate coefficients which do not fully account for the rapid recombination of Fe<sup>+</sup> or Mg<sup>+</sup> with CO<sub>2</sub>. The models also do not account for the increased efficiency CO<sub>2</sub> has as the third body during recombination reactions. Therefore, the work I undertook aimed to quantify the relative efficiency of CO<sub>2</sub> as a third body, compared to He and then combine this with other data to produce a model of the Martian atmosphere to investigate whether the third layer on Mars could consist of metallic ions. 
 
-used results in model
-what found
-Final link guffins
+![]({{site.baseurl}}/images/CO2thirdbody.png 'Plot of _k′_ versus [CO<sub>2</sub>] for recombination of Mg<sup>+</sup> with CO<sub>2</sub> in the presence of He, at 295 K and 4 Torr. The solid line is a second-order polynomial fit through the data. The dashed line indicates how _k′_ would vary if He and CO<sub>2</sub> have equal efficiency as the third body.')	
+
+The following graph shows the efficiency of CO<sub>2</sub> as a third body in comparison with He.  The dashed line indicates _k'_ if CO<sub>2</sub> had the same third-body efficiency as He. It can be seen that CO<sub>2</sub> is considerably more effective, with a final result showing CO<sub>2</sub> is 7.7 ± 1.6 more effective than He.  
+
 
