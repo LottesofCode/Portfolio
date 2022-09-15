@@ -76,7 +76,7 @@ The model output a best-fit to the data (solid line), error margins (dashed line
 
 There were a lot of interesting results obtained from my work and I won't go into all of them here - more, I will touch upon the most interesting points. 
 
-_### Earth's atmosphere_
+### _Earth's atmosphere_
 
 As mentioned above there is a large Mg+/Mg ratio, that could only be explained by a difference in chemistry, compared to other meteoric metals. 
 
@@ -87,11 +87,12 @@ The large ratio of Mg⁺:Mg can be explained by the fast reaction of MgO<sub>2</
 This difference allows rapid recycling of Mg⁺-containing ions back to Mg⁺, hence Mg⁺ ions have longer lifetime in the upper atmosphere compared with the other metallic ions. It was also found that the neutral magnesium reservoir species is relatively stable to reaction with atomic H, which leads to efficient removal of Mg atoms from the underside of the Mg layer, which combined with rapid recycling of Mg⁺ ions creates the observed large ion/neutral ratio.
 
 
-_### Martian Atmosphere_ 
+### _Martian Atmosphere_ 
 
 Like the Earth, other planetary bodies in the solar system are subject to a continuous bombardment of interplanetary dust. Low-lying plasma layers, a few km wide, have been observed in the Martian atmosphere around 90 km. These layers of plasma exist in the aerobreaking region of the Martian atmosphere where meteoroids ablate and it has been proposed that they consist of metallic ions by analogy with the terrestrial atmosphere. These Martian plasma layers resemble sporadic E layers found in the terrestrial atmosphere, which consist mostly of Fe<sup>+</sup> and Mg<sup>+</sup> ions. However, metallic ions in the CO<sub>2</sub>-rich Martian atmosphere would be rapidly neutralised by formation of metal-CO<sub>2</sub> cluster ions, followed by dissociative electron recombination.
 
-blerb about CO2 as third body
+During a three-body reaction the third body acts to remove excess energy from the intermediate complex. When Mg<sup>+</sup> ions and a reactant, X, collide they form an excited complex, Mg<sup>+</sup>.X*, which can either dissociate or be stabilised by collision with the third body, M. This collision with the third body removes the excess energy from the excited complex, thus stabilising it. Generally, the greater the number of internal degrees of freedom a third body possesses the more efficient it will be as energy can be more easily redistributed. The more efficient the removal of energy from the excited complex the faster the rate coefficient is observed to be.  CO<sub>2</sub>, as a three atom molecule, has a greater number of internal degrees of freedom than He. It will therefore act more efficiently as a third body, and rate coefficients for reactions with CO<sub>2</sub> as a third body will be faster than the comparable reaction with He as a third body. Previous models of the Martian sporadic layers have used rate coefficients which do not fully account for the rapid recombination of Fe<sup>+</sup> or Mg<sup>+</sup> with CO<sub>2</sub>. The models also do not account for the increased efficiency CO<sub>2</sub> has as the third body during recombination reactions.
+
 used results in model
 what found
 
