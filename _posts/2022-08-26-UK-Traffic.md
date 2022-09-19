@@ -22,7 +22,7 @@ Code can be viewed [here](https://github.com/LottesofCode/Road-Traffic-Accidents
 
 A selection of results are displayed in this [Tableau dashboard](https://public.tableau.com/views/UKRoadTrafficAccidentsSeverity2016-2020/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link). 
 
-![]({{site.baseurl}}/images/tableau.png "[Tableau Dashboard](https://public.tableau.com/app/profile/charlotte.salter/viz/UKRoadTrafficAccidentsSeverity2016-2020/Dashboard1)")
+![]({{site.baseurl}}/images/tableau.png "Tableau Dashboard - Click link above for interactive functionality")
 
 
 -  Men are twice as likely to have a fatal accident and 1.25 times more likely to be involved in a serious collision compared to women. 
