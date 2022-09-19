@@ -2,7 +2,7 @@
 toc: false
 layout: post
 description: Part Two of my DrivenData Tanzanian Water Pump Machine Learning Prediction Project
-image: images/1_O5faf-MlU7DseMP1mx8D7Q.jpeg
+image: images/tree.jpeg
 hide: false
 search_exclude: false
 categories: [Medium, Random forest, Python, Machine learning, EDA, jupyter]
