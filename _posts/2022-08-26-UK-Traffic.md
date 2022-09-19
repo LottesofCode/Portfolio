@@ -22,6 +22,8 @@ Code can be viewed [here](https://github.com/LottesofCode/Road-Traffic-Accidents
 
 A selection of results are displayed in this [Tableau dashboard](https://public.tableau.com/views/UKRoadTrafficAccidentsSeverity2016-2020/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link). 
 
+![]({{site.baseurl}}/images/[tableau.png](https://public.tableau.com/app/profile/charlotte.salter/viz/UKRoadTrafficAccidentsSeverity2016-2020/Dashboard1))
+
 
 -  Men are twice as likely to have a fatal accident and 1.25 times more likely to be involved in a serious collision compared to women. 
 -  The majority of mild and severe accidents occur at 30 mph - whereas both 30 mph and 60 mph account for the majority of fatal accidents. 73% of accidents take place on single carriageway roads - where there is no central barrier between the lanes, meaning accidents can easily become severe/fatal at the national speed limit of 60mph. 
