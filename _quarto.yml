@@ -35,8 +35,8 @@ website:
 format:
   html:
     theme:
-      - cosmo
-      - custom.scss
+      - darkly
+      - custom-dark.scss
     toc: true
     toc-location: right
     code-copy: true
