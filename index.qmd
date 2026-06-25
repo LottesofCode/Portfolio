@@ -1,13 +1,28 @@
 ---
-title: "Pump It Up — Machine Learning Prediction"
-description: "Part two of my DrivenData Tanzanian water-pump project: building and tuning the prediction model."
-date: "2022-09-02"
-image: ../images/tree.jpeg
-categories: [Python, Machine learning, Random forest, scikit-learn]
+pagetitle: "Lottes Griffin Portfolio"
+description: "A portfolio of data analysis and machine learning projects."
+listing:
+  id: projects
+  contents:
+    - gdp.ipynb
+    - okcupid.ipynb
+    - pump-it-up-eda.qmd
+    - pump-it-up-ml.qmd
+    - uk-traffic.qmd
+  sort: "date desc"
+  type: default
+  fields: [image, title, description, date]
+  sort-ui: false
+  filter-ui: false
+  date-format: "MMMM YYYY"
+toc: false
 ---
 
-## Project
+::: {.lead-in}
+Hi, I'm Lottes — a chemical physicist who fell for data somewhere between the gas-kinetics lab and the analysis that came after it. My PhD was spent measuring how magnesium behaves in the upper atmospheres of Earth and Mars; these days I bring that same instinct for finding signal in messy data to analytics and machine learning. Below are some of the projects I've built along the way.
+:::
 
-The second half of my [DrivenData competition](https://www.drivendata.org/competitions/7/pump-it-up-data-mining-the-water-table/) entry: training a Random Forest classifier to predict pump functionality, reaching 79% accuracy (top 27% of entrants). You can read the [second article, on the machine-learning predictions, here](https://medium.com/@lottes.salter/pump-it-up-prediction-b96830a024a5).
+## Projects
 
-![Photo by veeterzy on Pexels.](../images/tree.jpeg)
+::: {#projects}
+:::

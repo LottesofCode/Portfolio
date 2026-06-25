@@ -1,42 +1,56 @@
----
-title: "SQL Investigation of UK Road Traffic Accidents, 2016–2020"
-description: "How day, time, year and gender affect the severity of UK road accidents — explored with SQL and Tableau."
-date: "2022-08-26"
-image: ../images/Screenshot 2022-08-26 151756.png
-categories: [SQL, Tableau, MS SQL Server, Excel]
-toc: true
----
+/*-- scss:defaults --*/
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
 
-## Project
+$font-family-sans-serif: "Inter", system-ui, -apple-system, sans-serif;
+$headings-font-family:   "Space Grotesk", "Inter", sans-serif;
 
-A look into the effect of day, time, year and gender on the severity of road accidents in the UK between 2016 and 2020.
+$primary:    #1B2A4A;   // deep indigo (upper-atmosphere night)
+$body-color: #20283a;
+$link-color: #1f7d8c;   // airglow teal
+$link-hover-color: #14606c;
 
-## Method
+$navbar-bg: #0f1830;
+$navbar-fg: #e7edf6;
 
-Sorted and analysed the data using Excel and MS SQL Server. The SQL code can be viewed [here](https://github.com/LottesofCode/Road-Traffic-Accidents-UK/blob/main/SQLCarAccidents.sql).
+/*-- scss:rules --*/
+body { font-size: 1.02rem; line-height: 1.65; }
 
-## Results
+h1, h2, h3, h4 { font-weight: 600; letter-spacing: -0.01em; }
 
-A selection of results are shown in this [Tableau dashboard](https://public.tableau.com/views/UKRoadTrafficAccidentsSeverity2016-2020/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link).
+.navbar-title { font-family: "Space Grotesk", sans-serif; font-weight: 600; letter-spacing: .01em; }
+.navbar { box-shadow: 0 1px 0 rgba(255,255,255,.06); }
 
-![Tableau dashboard — click the link above for interactive functionality.](../images/tableau.png)
+/* home intro paragraph */
+.lead-in {
+  font-size: 1.22rem;
+  line-height: 1.6;
+  color: #36425a;
+  max-width: 60ch;
+  margin: 1.4rem 0 2.6rem;
+  border-left: 3px solid #1f7d8c;
+  padding-left: 1.1rem;
+}
 
-- Men are twice as likely to have a fatal accident, and 1.25 times more likely to be in a serious collision, compared with women.
-- Most mild and severe accidents occur at 30 mph, whereas both 30 mph and 60 mph account for the majority of fatal accidents. 73% of accidents take place on single-carriageway roads — where there is no central barrier between the lanes — meaning accidents can easily become severe or fatal at the national speed limit of 60 mph.
-- Both mild and severe accidents peak at 08:00 and 17:00, Monday to Friday, correlating with peak commuting hours. Fatal accidents don't follow this bimodal pattern, instead peaking around 17:00 — likely caused by weary or impatient commuters.
-- There are fewer mild and severe accidents on Saturdays and Sundays, due to a lack of commuter traffic. Interestingly, there's no corresponding drop in fatal accidents; in fact, the peak number of fatal accidents occurs on Sundays at 14:00.
-- Overall there are more accidents in the summer months. However, there are more commuter-hour accidents in winter, where darker light conditions may play a role.
-- The greatest number of accidents occur on the A38, followed by the A23, A4 and A1. The M25 has the most of any motorway, likely explained by its sheer traffic volume.
-- There was too much missing or null data on driver age group to analyse it reliably.
+/* listing cards */
+.quarto-listing { margin-top: .5rem; }
+.quarto-post {
+  border: 1px solid #e4e9f1;
+  border-radius: 14px;
+  padding: 1.1rem 1.2rem;
+  transition: border-color .2s, transform .2s, box-shadow .2s;
+}
+.quarto-post:hover {
+  border-color: #c7d3e4;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px -26px rgba(27,42,74,.45);
+}
+.quarto-post .listing-title { font-family: "Space Grotesk", sans-serif; }
+.listing-date { font-family: "Space Grotesk", sans-serif; color: #1f7d8c; }
 
-## Further work
+/* category pills */
+.quarto-category {
+  background: #eef3f8; border: 1px solid #e0e8f1; color: #41506a;
+  border-radius: 6px;
+}
 
-There's a wealth of data in this dataset, with much more insight available. Further investigations could look at:
-
-- Which gender of driver is most likely to crash on a motorway versus an A road.
-- Which road features (junctions, pedestrian crossings, traffic lights) most influence accident severity.
-- How big a role carriageway obstructions play in causing severe or fatal accidents.
-
-## Data
-
-Data obtained from [UK Gov Road Safety Data](https://www.data.gov.uk/dataset/cb7ae6f0-4be6-4935-9277-47e5ce24a11f/road-safety-data).
+a { text-underline-offset: 2px; }
