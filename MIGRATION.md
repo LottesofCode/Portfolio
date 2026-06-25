@@ -1,0 +1,13 @@
+---
+title: "Pump It Up — Exploratory Data Analysis"
+description: "Part one of my DrivenData Tanzanian water-pump machine-learning project: exploring and cleaning the data."
+date: "2022-09-01"
+image: ../images/1_O5faf-MlU7DseMP1mx8D7Q.jpeg
+categories: [Python, EDA, Machine learning, Random forest]
+---
+
+## Project
+
+I took part in a [competition on DrivenData](https://www.drivendata.org/competitions/7/pump-it-up-data-mining-the-water-table/), predicting the functionality of water pumps across Tanzania. I wrote the work up on Medium — you can read the [first article, on the exploratory data analysis, here](https://medium.com/@lottes.salter/pump-it-up-the-eda-bcdea9f8d4e2).
+
+![Photo by Kelly on Pexels.](../images/1_O5faf-MlU7DseMP1mx8D7Q.jpeg)

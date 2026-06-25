@@ -1,0 +1,49 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - images/
+
+website:
+  title: "Lottes Griffin Portfolio"
+  description: "A portfolio of data analysis and machine learning projects."
+  site-url: "https://lottesofcode.github.io/Portfolio/"
+  repo-url: "https://github.com/LottesofCode/Portfolio"
+  favicon: images/favicon.ico
+  navbar:
+    pinned: true
+    left:
+      - href: index.qmd
+        text: Home
+      - href: phd.qmd
+        text: My PhD
+      - href: about.qmd
+        text: About Me
+    right:
+      - icon: github
+        href: https://github.com/LottesofCode
+        aria-label: GitHub
+      - icon: linkedin
+        href: https://www.linkedin.com/in/lottes-griffin/
+        aria-label: LinkedIn
+  page-footer:
+    border: true
+    left: "© 2026 Charlotte (Lottes) Griffin, PhD"
+    right: "Built with [Quarto](https://quarto.org)"
+
+format:
+  html:
+    theme:
+      - cosmo
+      - custom.scss
+    toc: true
+    toc-location: right
+    code-copy: true
+    code-overflow: wrap
+    anchor-sections: true
+    smooth-scroll: true
+    link-external-newwindow: true
+
+execute:
+  enabled: false
+  freeze: auto

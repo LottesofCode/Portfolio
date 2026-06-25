@@ -1,0 +1,13 @@
+---
+title: "Pump It Up — Machine Learning Prediction"
+description: "Part two of my DrivenData Tanzanian water-pump project: building and tuning the prediction model."
+date: "2022-09-02"
+image: ../images/tree.jpeg
+categories: [Python, Machine learning, Random forest, scikit-learn]
+---
+
+## Project
+
+The second half of my [DrivenData competition](https://www.drivendata.org/competitions/7/pump-it-up-data-mining-the-water-table/) entry: training a Random Forest classifier to predict pump functionality, reaching 79% accuracy (top 27% of entrants). You can read the [second article, on the machine-learning predictions, here](https://medium.com/@lottes.salter/pump-it-up-prediction-b96830a024a5).
+
+![Photo by veeterzy on Pexels.](../images/tree.jpeg)
